@@ -12,18 +12,55 @@
         <form id="formVazaoAR" class="container rounded border border-black mt-4 p-4 shadow-sm bg-light">
             <h1 class="fs-4">Dimensionamento do subsistema de ventilação secundária</h1>
             <hr />
+
             <div class="mb-4">
-                <label for="diametroTQ" class="form-label">Diâmetro TQ</label>
+                <label for="diametroTQ" class="form-label">Diâmetro TQ (mm)</label>
                 <select class="form-select border-black shadow-sm" id="diametroTQ"></select>
+                <p class="form-text">Diâmetro do tubo de queda, em milímetros</p>
             </div>
+
             <div class="mb-4">
                 <label for="vazaoTQ" class="form-label" name="vazaoTQ">Vazão TQ (l/s)</label>
-                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="vazaoTQ">
+                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="vazaoTQ" required>
+                <p class="form-text">Vazão no tubo de queda, em litros por segundo</p>
             </div>
+
+            <div class="mb-4">
+                <label for="comprimentoCV" class="form-label" name="comprimentoCV">Comprimento CV (m)</label>
+                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="comprimentoCV" required>
+                <p class="form-text">Comprimento da coluna de ventilação em metros</p>
+            </div>
+            
+            <div class="mb-4">
+                <label for="diamentroCV_" class="form-label" name="diamentroCV_">Diâmetro CV' (mm)</label>
+                <select class="form-select border-black shadow-sm" id="diametroCV_"></select>
+                <p class="form-text">Diâmetro da coluna de ventilação, valor temporário para cálculo interativo da equação</p>
+            </div>
+
+            <div class="mb-4">
+                <label for="comprimentoCV_" class="form-label" name="comprimentoCV_">Comprimento CV (mm)</label>
+                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="comprimentoCV_" disabled>
+                <p class="form-text">Comprimento da coluna de ventilação em milímetros</p>
+            </div>
+
             <div class="mb-4">
                 <label for="vazaoAR" class="form-label" name="vazaoAR">Vazão AR (l/s)</label>
-                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="vazaoAR">
+                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="vazaoAR" disabled>
+                <p class="form-text">vazão de ar que escoa pelo núcleo de ar no tubo de queda, em litros por segundo</p>
             </div>
+
+            <div class="mb-4">
+                <label for="vazaoAR_" class="form-label" name="vazaoAR_">Vazão AR' (l/min)</label>
+                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="vazaoAR_" disabled>
+                <p class="form-text">vazão de ar na coluna de ventilação, em litros por minuto</p>
+            </div>
+
+            <div class="mb-4">
+                <label for="diametroCV" class="form-label" name="diametroCV">Diâmetro CV (mm)</label>
+                <input type="number" step="0.01" class="form-control border-black shadow-sm" id="diametroCV" disabled>
+                <p class="form-text">Diâmetro da coluna de ventilação, considerar o diâmetro imediatamente superior</p>
+            </div>
+
             <button class="btn btn-dark w-50 ">Calcular</button>
         </form>
     </div>

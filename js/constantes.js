@@ -12,9 +12,10 @@ const valoresPerdaDeCarga = {
     "100": 0.037,
 }
 
-const diametros = [50, 75, 100, 150];
+const diametros = [40, 50, 75, 100, 150];
 
 window.constantes = {
     valoresAlpha,
+    valoresPerdaDeCarga,
     diametros,
 }
